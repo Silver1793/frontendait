@@ -7,8 +7,10 @@ function Trial() {
   const [words, setWords] = useState([]);
   const [input, setInput] = useState([]);
   const [post, setPost] = useState("");
+  const baseUrl = process.env.baseURL || "http://localhost:6001";
+  const other = "https://infinite-hollows-22494.herokuapp.com";
   useEffect(() => {
-    axios.get("http://localhost:6001/dictionary").then(function (response) {
+    axios.get(/*baseUrl*/ other + "/dictionary").then(function (response) {
       const temp = response.data;
       setX(temp);
       setWords(temp);
@@ -32,7 +34,7 @@ function Trial() {
   const handleSubmitPost = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:6001/add", post)
+      .post(/*baseUrl*/ other + "/add", post)
       .then((res) => {
         console.log("Success");
         setPost("");
