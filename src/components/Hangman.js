@@ -10,7 +10,7 @@ function Hangman() {
   const [guessed, setGuessed] = useState([]);
   const [input, setInput] = useState("");
   const baseUrl = process.env.baseURL || "http://localhost:6001";
-  const other = "https://infinite-hollows-22494.herokuapp.com/";
+  const other = "https://infinite-hollows-22494.herokuapp.com";
 
   useEffect(() => {
     axios.get(other /*baseUrl*/ + "/words").then(function (response) {
