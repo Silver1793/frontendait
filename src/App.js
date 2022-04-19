@@ -1,7 +1,7 @@
 import "./App.css";
 import Hangman from "./components/Hangman";
 import NavBar from "./components/NavBar";
-import Trial from "./components/Trial";
+import Dictionary from "./components/Dictionary";
 import HomePage from "./components/HomePage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -13,7 +13,7 @@ function App() {
         <br />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/test" element={<Trial />} />
+          <Route path="/dictionary" element={<Dictionary />} />
         </Routes>
       </Router>
     </div>

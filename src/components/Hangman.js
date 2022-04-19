@@ -10,10 +10,10 @@ function Hangman() {
   const [guessed, setGuessed] = useState([]);
   const [input, setInput] = useState("");
   const baseUrl = process.env.baseURL || "http://localhost:6001";
-  const other = "https://richardthisisatest.herokuapp.com";
+  const other = "https://infinite-hollows-22494.herokuapp.com/";
 
   useEffect(() => {
-    axios.get(other + "/words").then(function (response) {
+    axios.get(other /*baseUrl*/ + "/words").then(function (response) {
       setWord(response.data);
     });
   }, []);
@@ -29,8 +29,7 @@ function Hangman() {
       .map((letter) => (guessed.includes(letter) ? letter : " _ "));
   };
   const reset = () => {
-    console.log("HERE");
-    axios.get(other + "/words").then(function (response) {
+    axios.get(other /*baseUrl*/ + "/words").then(function (response) {
       setWord(response.data);
     });
     setOver(false);
