@@ -12,7 +12,7 @@ function NavBar() {
         <ul className="navbar-nav mr-auto">
           <li>
             <Link to="/dictionary" className="navbar-brand">
-              Test
+              Dictionary
             </Link>
           </li>
         </ul>

@@ -12,9 +12,17 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.dictionary{
+  width:50%;
+}
 .centered {
   /* height: 100vh; Magic here */
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tree{
+  display: block;
   justify-content: center;
   align-items: center;
 }
@@ -23,12 +31,26 @@
   background-color: #fbeaeb;
   border-radius: 10px;
   padding: 10px 20px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.btn-next {
+  color: #2f3c7e;
+  background-color: yellow;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .btn-alpha {
   color: #2f3c7e;
   background-color: red;
   border-radius: 10px;
   padding: 10px 20px;
+  margin-left: 5px;
+  margin-bottom: 2px;
 }
 
 .App-header {
